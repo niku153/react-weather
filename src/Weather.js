@@ -173,19 +173,28 @@ export default function App() {
       </div>
       <footer>
         <a
-          href="https://github.com/niku153/Weather-application"
+          href="https://github.com/niku153/react-weather"
           target="_blank"
           rel="noreferrer"
-          className="github-link"
+          className="footer-link"
         >
           open source code{" "}
         </a>
-        by nirali parikh, hosted on{" "}
+        by{" "}
         <a
-          href="https://gleeful-syrniki-10e995.netlify.app/"
+          href="https://vermillion-froyo-c5f38e.netlify.app/"
           target="_blank"
           rel="noreferrer"
-          className="netlify-link"
+          className="footer-link"
+        >
+          nirali parikh
+        </a>
+        , hosted on{" "}
+        <a
+          href="https://bejewelled-cranachan-510a11.netlify.app/?"
+          target="_blank"
+          rel="noreferrer"
+          className="footer-link"
         >
           netlify
         </a>

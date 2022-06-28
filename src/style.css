@@ -195,11 +195,7 @@ footer {
   font-weight: lighter;
   font-size: 13px;
 }
-.github-link {
-  text-decoration: none;
-}
-
-.netlify-link {
+.footer-link {
   text-decoration: none;
 }
 
