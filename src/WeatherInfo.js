@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
+import Rainfall from "./Rainfall";
 
 export default function WeatherInfo(props) {
   return (
@@ -62,10 +63,10 @@ export default function WeatherInfo(props) {
               className="other-parameter-icon"
             />
           </span>
-          Rainfall:
+          1h Rainfall:
           <span className="rainfall-value other-parameter-values" id="rainfall">
             {" "}
-            {props.data.rainfall}
+            <Rainfall rainfall={props.data.rainfall} />
           </span>
         </li>
         <li className="Humidity">
