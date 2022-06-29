@@ -205,3 +205,9 @@ footer {
   max-width: 725px;
   margin: 0 auto;
 }
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

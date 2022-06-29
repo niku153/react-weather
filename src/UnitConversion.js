@@ -15,20 +15,10 @@ export default function UnitConversion(props) {
   if (unit === "celsius") {
     return (
       <span>
-        <span className="current-temperature" id="current-temperature">
-          {props.celsius}
-        </span>
+        <span className="current-temperature">{props.celsius}</span>
         <span className="units">
-          <span className="celsius" id="celsius">
-            °C
-          </span>{" "}
-          |{" "}
-          <a
-            href="/"
-            className="fahrenheit"
-            id="fahrenheit"
-            onClick={showFahrenheit}
-          >
+          <span className="celsius">°C</span> |{" "}
+          <a href="/" className="fahrenheit" onClick={showFahrenheit}>
             °F
           </a>
         </span>
@@ -38,20 +28,10 @@ export default function UnitConversion(props) {
     let fahrenheit = Math.round((props.celsius * 9) / 5 + 32);
     return (
       <span>
-        <span className="current-temperature" id="current-temperature">
-          {fahrenheit}
-        </span>
+        <span className="current-temperature">{fahrenheit}</span>
         <span className="units">
-          <span className="celsius" id="celsius">
-            °F
-          </span>{" "}
-          |{" "}
-          <a
-            href="/"
-            className="fahrenheit"
-            id="fahrenheit"
-            onClick={showCelsius}
-          >
+          <span className="celsius">°F</span> |{" "}
+          <a href="/" className="fahrenheit" onClick={showCelsius}>
             °C
           </a>
         </span>

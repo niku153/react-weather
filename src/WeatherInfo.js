@@ -7,12 +7,12 @@ import UnitConversion from "./UnitConversion";
 export default function WeatherInfo(props) {
   return (
     <div>
-      <h1 id="current-city">{props.data.name}</h1>
+      <h1>{props.data.name}</h1>
       <h2>
-        <span id="current-date">
+        <span>
           <FormattedDate date={props.data.date} />
         </span>
-        <span className="current-time" id="current-time">
+        <span className="current-time">
           <FormattedTime date={props.data.time} />
         </span>
       </h2>
@@ -24,12 +24,9 @@ export default function WeatherInfo(props) {
             src={props.data.icon}
             alt={props.data.description}
             className="current-condition-icon"
-            id="current-condition-icon"
           />
         </span>
-        <div className="weather-description" id="weather-description">
-          {props.data.description}
-        </div>
+        <div className="weather-description">{props.data.description}</div>
       </div>
       <ul className="other-parameters">
         <li className="Wind">
@@ -41,7 +38,7 @@ export default function WeatherInfo(props) {
             />
           </span>
           Wind:
-          <span className="wind-value other-parameter-values" id="wind">
+          <span className="wind-value other-parameter-values">
             {" "}
             {props.data.wind}km/h
           </span>
@@ -55,7 +52,7 @@ export default function WeatherInfo(props) {
             />
           </span>
           1h Rainfall:
-          <span className="rainfall-value other-parameter-values" id="rainfall">
+          <span className="rainfall-value other-parameter-values">
             {" "}
             <Rainfall rainfall={props.data.rainfall} />
           </span>
@@ -69,7 +66,7 @@ export default function WeatherInfo(props) {
             />
           </span>
           Humidity:
-          <span className="humidity-value other-parameter-values" id="humidity">
+          <span className="humidity-value other-parameter-values">
             {" "}
             {props.data.humidity}%
           </span>
@@ -83,7 +80,7 @@ export default function WeatherInfo(props) {
             />
           </span>
           Sunrise:
-          <span className="sunrise-time other-parameter-values" id="sunrise">
+          <span className="sunrise-time other-parameter-values">
             {" "}
             <FormattedTime date={props.data.sunrise} />
           </span>
@@ -97,7 +94,7 @@ export default function WeatherInfo(props) {
             />
           </span>
           Sunset:
-          <span className="sunset-time other-parameter-values" id="sunset">
+          <span className="sunset-time other-parameter-values">
             {" "}
             <FormattedTime date={props.data.sunset} />
           </span>
