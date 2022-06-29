@@ -84,6 +84,8 @@ h2 {
 
 .current-time {
   float: right;
+  position: relative;
+  top: -14px;
 }
 
 .current-temperature-wrapper {
