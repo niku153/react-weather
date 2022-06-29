@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
 import Rainfall from "./Rainfall";
+import UnitConversion from "./UnitConversion";
 
 export default function WeatherInfo(props) {
   return (
@@ -16,18 +17,8 @@ export default function WeatherInfo(props) {
         </span>
       </h2>
       <div className="current-temperature-wrapper">
-        <span className="current-temperature" id="current-temperature">
-          {props.data.temperature}
-        </span>
-        <span className="units">
-          <a href="/" className="celsius" id="celsius">
-            °C
-          </a>{" "}
-          |
-          <a href="/" className="fahrenheit" id="fahrenheit">
-            °F
-          </a>
-        </span>
+        <UnitConversion celsius={props.data.temperature} />
+
         <span>
           <img
             src={props.data.icon}
