@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import { ThreeDots } from "react-loader-spinner";
 
 export default function Weather(props) {
@@ -15,12 +16,14 @@ export default function Weather(props) {
       temperature: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed * 3.6),
       name: response.data.name,
+      country: response.data.sys.country,
       description: response.data.weather[0].main,
       icon: `https://raw.githubusercontent.com/niku153/Weather-application/main/media/${response.data.weather[0].icon}.svg`,
       humidity: response.data.main.humidity,
       rainfall: response.data.rain,
       sunrise: new Date(response.data.sys.sunrise * 1000),
       sunset: new Date(response.data.sys.sunset * 1000),
+      coordinates: response.data.coord,
     });
     setLoaded(true);
   }
@@ -76,8 +79,9 @@ export default function Weather(props) {
           <div className="row">
             <div className="col-sm-8 current-conditions shadow">
               <WeatherInfo data={conditions} />
-
-              <div className="col-sm-4 forecast shadow"></div>
+            </div>
+            <div className="col-sm-4 forecast shadow">
+              <WeatherForecast coordinates={conditions.coordinates} />
             </div>
           </div>
         </div>

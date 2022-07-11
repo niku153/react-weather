@@ -7,7 +7,9 @@ import UnitConversion from "./UnitConversion";
 export default function WeatherInfo(props) {
   return (
     <div>
-      <h1>{props.data.name}</h1>
+      <h1>
+        {props.data.name}, {props.data.country}
+      </h1>
       <h2>
         <span>
           <FormattedDate date={props.data.date} />
